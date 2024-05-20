@@ -17,6 +17,13 @@ VITE_KEY=1234
 
 *Remember that this file should not be committed in a git repo, as we don't want expose these secrets in `git history` and in a git `repository`.*
 
+To achieve this, `.gitignore` is the best place, just add a new line `.env*`.
+
+NB. The wildcard is needed because multiple per-environment `.env` files are supported, for example `.env.local`, `.env.production`, etc.
+
+*Bonus tip*: **did you commit sensitive data in your repo?** 
+Be aware that it's possible to remove them, see [Github docs | Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
 ## Usage
 
 Then, in a javascript file we can use the Environment variable `VITE_KEY`.
